@@ -9,3 +9,12 @@ html, body {
   margin: 0;
   background: linear-gradient(90deg, #5DE0E6, #004AAD);
 }
+
+h6 {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+p {
+  font-size: 19px;
+}

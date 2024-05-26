@@ -1,15 +1,16 @@
 import * as React from 'react';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
+import ComingSoonPage from './coming-soon';
 
-const Projects = () => {
+const ProjectsPage = () => {
   return (
     <Layout>
-      <div></div>
+      <ComingSoonPage></ComingSoonPage>
     </Layout>
   );
 }
 
 export const Head = () => <Seo title="My Projects" />
  
-export default Projects;
+export default ProjectsPage;
