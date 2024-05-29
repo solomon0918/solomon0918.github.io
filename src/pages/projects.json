@@ -2,7 +2,7 @@
   {
     "title": "Auction Tale",
     "company": "Offshorly",
-    "description": "Vue.js/Laravel auction platform. Sellers list items, buyers bid. Admins manage approvals/scheduling. Tailwind CSS for sleek design. Real-time updates. Future: advanced search/payment integration. Ideal for efficient auctioning.",
+    "description": "An auction platform, developed with Vue.js and Laravel, offers a comprehensive solution for online auctions. Sellers can easily list their items, complete with detailed descriptions and images, while buyers can place bids in real-time, ensuring a dynamic and engaging auction experience.",
     "image": "auction-tale/homepage.png",
     "images": []
   },
@@ -30,7 +30,7 @@
   {
     "title": "Virtual Assistants Finder",
     "company": "VirtualStaff PH",
-    "description": "A website built on Vue.js and Laravel, styled with Tailwind CSS. The application facilitates auctions where sellers list items, buyers place bids, and admins manage approvals and scheduling. It features real-time updates and is compatible with various devices, ensuring a seamless user experience for all participants.",
+    "description": "Developed a new application from scratch for finding virtual assistants using ReactJS. The application features comprehensive dashboards for both employers and job seekers, including functionalities such as real-time chat, time tracking, job postings, and application management. It also offers search filters and profile management to streamline the hiring process. The goal was to revamp their site, enhancing user experience, performance, and overall efficiency.",
     "image": "virtualstaff/home-page.png",
     "images": []
   },

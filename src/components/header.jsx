@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink";
-import { AppBar, IconButton, Drawer, List, ListItem, ListItemText, Toolbar, Box, useMediaQuery, ListItemButton, Divider } from '@mui/material';
+import { AppBar, IconButton, Drawer, List, ListItemText, Toolbar, Box, useMediaQuery, ListItemButton, Divider, useScrollTrigger } from '@mui/material';
 import { useLocation } from "@reach/router";
 import MenuIcon from '@mui/icons-material/Menu';
 import logo from '../assets/Erwin-logo.png';
@@ -10,12 +10,17 @@ const Header = ({ siteTitle }) => {
   const { pathname } = useLocation();
   const isMobile = useMediaQuery('(max-width:600px)');
 
+  const trigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 0
+  });
+
   const isCurrent = (path) => {
     return path === pathname;
   }
 
   const isActive = (path) => {
-    return isCurrent(path) ? 'border-b-white border-b-2' : undefined;
+    return isCurrent(path) ? trigger ? 'border-b-primary border-b-2' : 'border-b-white border-b-2' : undefined;
   }
 
   const toggleDrawer = (open) => (event) => {
@@ -43,7 +48,7 @@ const Header = ({ siteTitle }) => {
         href="https://drive.google.com/file/d/1ShWFHPyZQJ4lFAu_AdO2oXgmeiRgYOKD/view?usp=sharing"
         rel="noreferrer"
         target="_blank"
-        className="transition ease-in-out border-secondary hover:bg-white hover:border-white hover:text-black hover:font-bold hover:-translate-y-1 rounded-md border-2 px-3 py-2 duration-300"
+        className={`transition ease-in-out ${trigger ? 'border-primary hover:border-primary' : 'border-secondary hover:border-white'} hover:bg-white  hover:text-blue-950 hover:font-bold hover:-translate-y-1 rounded-md border-2 px-3 py-2 duration-300`}
       >
         Resume
       </a>
@@ -52,10 +57,22 @@ const Header = ({ siteTitle }) => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" style={{ background: 'transparent', boxShadow: 'none' }}>
+      {trigger ? <div className="py-[40px]"></div> : undefined}
+      <AppBar 
+        position={trigger ? 'fixed' : 'static'} 
+        style={{ 
+          background: trigger ? 'white' : 'transparent', 
+          boxShadow: 'none', 
+          color: trigger ? '#004AAD' : '', 
+        }}
+        className={
+          `transition-transform duration-300 ease-in-out 
+          ${trigger ? "translate-y-0" : ""}`
+        }
+        >
         <Toolbar>
           <div className="flex-grow">
-            <img src={logo} height={48} width={84} alt="Erwin Mark Anora Portfolio Logo" className="cursor-pointer" />
+            <img src={logo} height={48} width={84} alt={siteTitle} className="cursor-pointer" />
           </div>
           
           {isMobile ? (

@@ -1,7 +1,7 @@
 [
   {
     "title": "Auction Tale",
-    "description": "Vue.js/Laravel auction platform. Sellers list items, buyers bid. Admins manage approvals/scheduling. Tailwind CSS for sleek design. Real-time updates. Future: advanced search/payment integration. Ideal for efficient auctioning.",
+    "description": "An auction platform, developed with Vue.js and Laravel, offers a comprehensive solution for online auctions. Sellers can easily list their items, complete with detailed descriptions and images, while buyers can place bids in real-time, ensuring a dynamic and engaging auction experience.",
     "image": "auction-tale/homepage.png",
     "slug": "auction-tale",
     "images": []
