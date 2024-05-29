@@ -18,7 +18,7 @@ const IndexPage = () => {
           <div className="text-white ml-12">
             <h3 className="text-[32px]">Hi, I'm</h3>
             <div className="mr-16 text-center">
-              <h2 className="text-[38px] md:text-[50px] font-bold uppercase">Erwin Mark Añora</h2>
+              <h2 className="text-[35px] md:text-[50px] font-bold uppercase">Erwin Mark Añora</h2>
               <h4 className="text-[23px] font-semibold mb-2">Full Stack Web Developer</h4>
               <p className="text-[20px]">
               Experienced Full Stack Developer with nearly 8 years of hands-on experience across diverse industries including mining, healthcare, construction, and law firms.
