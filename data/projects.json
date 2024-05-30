@@ -1,0 +1,114 @@
+[
+  {
+    "title": "Auction Tale",
+    "company": "Offshorly",
+    "description": "An advanced auction platform built with Vue.js and Laravel, utilizing Tailwind CSS for a sleek and responsive design. This application enables sellers to list items for auction, buyers to place competitive bids, and administrators to oversee the entire process by approving, rejecting, and scheduling auctions. Key features include real-time updates, user-friendly interfaces, and robust administrative controls. Auction Tale ensures a seamless and efficient auction experience for all users, enhancing the traditional auction process with modern technology.",
+    "slug": "auction-tale",
+    "image": "auction-tale/homepage.png",
+    "images": [
+      "auction-tale/homepage.png", 
+      "auction-tale/admin-page.png", 
+      "auction-tale/auction-search-page.png", 
+      "auction-tale/dashboard-page.png", 
+      "auction-tale/forgot-password-page.png", 
+      "auction-tale/how-to-value-page.png",
+      "auction-tale/login-page.png",
+      "auction-tale/scheduled-lots-page.png",
+      "auction-tale/sell-page.png",
+      "auction-tale/settings-page.png",
+      "auction-tale/sign-up-page.png",
+      "auction-tale/whypage.png"
+    ]
+  },
+  {
+    "title": "Virtual Assistants Finder",
+    "company": "VirtualStaff PH",
+    "description": "Developed a new application from scratch for finding virtual assistants using ReactJS. The application features comprehensive dashboards for both employers and job seekers, including functionalities such as real-time chat, time tracking, job postings, and application management. It also offers search filters and profile management to streamline the hiring process. The goal was to revamp their site, enhancing user experience, performance, and overall efficiency.",
+    "slug": "virtual-assistant-finder",
+    "image": "virtualstaff/home-page.png",
+    "images": [
+      "virtualstaff/home-page.png",
+      "virtualstaff/detail-knowledge-base-page.png",
+      "virtualstaff/enterprise-page.png",
+      "virtualstaff/faq-page.png",
+      "virtualstaff/how-it-works-page.png",
+      "virtualstaff/knowledge-base-page.png",
+      "virtualstaff/list-knowledge-base-page.png",
+      "virtualstaff/login-page.png",
+      "virtualstaff/search-job-filters-page.png",
+      "virtualstaff/search-job-page.png",
+      "virtualstaff/sign-up-page.png",
+      "virtualstaff/sign-up-role-page.png",
+      "virtualstaff/under-construction-page.png"
+    ]
+  },
+  {
+    "title": "Dashboard California Ticket King",
+    "company": "California Ticket King",
+    "description": "A website built on Vue.js and Laravel for company attorneys and staff. The application records and creates cases from clients, allows user creation and updates, manages payment coupons, assigns courthouses for attorneys, and integrates Stripe accounts. It ensures efficient case management and payment processing.",
+    "slug": "dashboard-california-ticket-king",
+    "image": "dashboard-ctk/dashboard-page.png",
+    "images": [
+      "dashboard-ctk/dashboard-page.png",
+      "dashboard-ctk/cases-page.png",
+      "dashboard-ctk/coupons-page.png",
+      "dashboard-ctk/courthouse-page.png",
+      "dashboard-ctk/create-faq-page.png",
+      "dashboard-ctk/dropdown-notification.png",
+      "dashboard-ctk/login-page.png",
+      "dashboard-ctk/notification-page.png",
+      "dashboard-ctk/profile-page.png",
+      "dashboard-ctk/register-page.png",
+      "dashboard-ctk/users-page.png",
+      "dashboard-ctk/zip-codes-page.png"
+    ]
+  },
+  {
+    "title": "SBHE Project Management",
+    "company": "SBHE Pte Ltd",
+    "description": "An application built on Laravel and AngularJS used by company employees and owners to oversee and manage projects and employee work. It records all ongoing construction projects and tracks workers, including their attendance and hours. The application also maintains equipment backlogs and conditions, providing a comprehensive view of company resources and project status.",
+    "slug": "sbhe-project-management",
+    "image": "sbhe-project-management/dashboard-page.png",
+    "images": [
+      "sbhe-project-management/dashboard-page.png",
+      "sbhe-project-management/add-new-company-delete-page.png",
+      "sbhe-project-management/add-new-company-page.png",
+      "sbhe-project-management/add-new-project-page.png",
+      "sbhe-project-management/announcement-page.png",
+      "sbhe-project-management/employees-page.png",
+      "sbhe-project-management/login-page.png",
+      "sbhe-project-management/project-detail-new-page.png",
+      "sbhe-project-management/project-detail-page.png",
+      "sbhe-project-management/toolbox-meeting-page.png",
+      "sbhe-project-management/users-page.png"
+    ]
+  },
+  {
+    "title": "California Ticket King Payment Portal",
+    "company": "California Ticket King",
+    "description": "A payment portal built on Slim PHP and jQuery. This website collects information and payments via Stripe from clients with traffic tickets who hire attorneys to resolve them. Currently, the application serves clients in California counties only.",
+    "slug": "california-ticket-king-payment-portal",
+    "image": "ctk-payment-portal/step-one-courthouse-page.png",
+    "images": [
+      "ctk-payment-portal/step-one-courthouse-page.png",
+      "ctk-payment-portal/step-two-client-info-page.png",
+      "ctk-payment-portal/step-three-agreement-page.png",
+      "ctk-payment-portal/agreement-modal.png",
+      "ctk-payment-portal/step-four-payment-page.png"
+    ]
+  },
+  {
+    "title": "Online Leave Forms",
+    "company": "HPO",
+    "description": "A web application for submitting leave forms online, enabling employees of a specific company to file leave requests easily and efficiently. The application streamlines the leave application process, allowing for quick submissions, approvals, and tracking of leave records.",
+    "slug": "online-leave-forms",
+    "image": "online-leave-forms/create-form-page.png",
+    "images": [
+      "online-leave-forms/create-form-page.png",
+      "online-leave-forms/change-password.png",
+      "online-leave-forms/edit-profile-page.png",
+      "online-leave-forms/history-page.png",
+      "online-leave-forms/login-page.png"
+    ]
+  }
+]

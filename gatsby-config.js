@@ -48,6 +48,13 @@ module.exports = {
       },
     },
     'gatsby-plugin-transition-link',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `./data/`,
+      },
+    },
     'gatsby-transformer-json',
   ],
 }

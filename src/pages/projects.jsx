@@ -4,8 +4,9 @@ import Seo from '../components/seo';
 import { graphql } from 'gatsby'
 import { Divider, Card, CardContent, CardActions } from '@mui/material';
 import Typography from '@mui/material/Typography';
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 import { GatsbyImage } from "gatsby-plugin-image";
-import projects from './projects.json';
+import projects from '../../data/projects.json';
 
 const ProjectsPage = ({ data }) => {
   return (
@@ -49,7 +50,14 @@ const ProjectsPage = ({ data }) => {
                   </CardContent>
 
                   <CardActions className="px-4 !pb-6">
-                    <a href="#" className="transition ease-in-out border-2 border-primary px-3 py-1 hover:bg-transparent text-primary hover:bg-primary hover:-translate-y-1 rounded-md duration-300"><span className="font-bold">Learn More</span></a>
+                    <AniLink 
+                      cover 
+                      bg="#004AAD"
+                      to={`/projects/${project.slug}`} 
+                      className="transition ease-in-out border-2 border-primary px-3 py-1 hover:bg-transparent text-primary hover:bg-primary hover:-translate-y-1 rounded-md duration-300"
+                    >
+                    <span className="font-bold">Learn More</span>
+                    </AniLink>
                   </CardActions>
                 </Card>    
               </div> 
