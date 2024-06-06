@@ -8,6 +8,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import meGIF from '../images/image-profile-portfolio.gif';
 
 const IndexPage = () => {
   return (
@@ -41,9 +42,13 @@ const IndexPage = () => {
           </div>
         </Grid>
         <Grid item xs={12} md={6} className="flex justify-center pb-8 md:pb-0">
-          <div className="border-primary_light border-4 rounded-xl w-fit p-12 ">
-            <StaticImage src="../images/portfolio-personal.png" loading="eager" alt="Erwin Mark Photo" className="rounded-md shadow-lg shadow-black transition ease-in-out hover:-translate-y-3" />
-          </div>
+          <img 
+            src={meGIF} 
+            width={400} 
+            loading="eager" 
+            className="rounded-md shadow-lg shadow-black"
+            alt="Erwin Mark Image Portfolio"
+          />
         </Grid>
       </Grid>
     </Box>

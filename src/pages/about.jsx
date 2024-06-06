@@ -144,7 +144,7 @@ const AboutPage = () => {
                       <h6 className="text-blue-950">Web Developer | Mar 2017 - Jun 2018</h6>
                       <h6 className="text-primary">Note-e-fied Incorporated</h6>
                       <p className="mt-3">
-                        I was assigned to work on two applications for the company, using .NET for the back-end and AngularJS and jQuery for the front-end. My tasks involved developing new features, maintaining existing code, and ensuring smooth interaction between front-end and back-end elements. This experience gave me insights into managing complex web projects and collaborating effectively within a team.
+                        I was assigned to work on two applications for the company, using .NET for the back-end and AngularJS and jQuery for the front-end. My tasks involved developing new features, maintaining existing code, and ensuring smooth interaction between front-end and back-end elements. Throughout this process, I also ensured that the work complied with relevant regulations, such as HIPAA (Health Insurance Portability and Accountability Act) compliance. Given the sensitive nature of the data handled by the applications, ensuring HIPAA compliance was paramount to protect patient confidentiality and privacy. This experience gave me insights into managing complex web projects and collaborating effectively within a team.
                       </p>
                     </TimelineContent>
                   </TimelineItem>

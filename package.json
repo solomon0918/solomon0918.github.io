@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "erwin-mark-anora-eportfolio",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A simple personal portfolio of Erwin Mark Anora using Gatsby.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Erwin Mark Anora <erwinmark.anora@gmail.com>",
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
@@ -16,6 +16,7 @@
     "gatsby-plugin-manifest": "^5.12.0",
     "gatsby-plugin-nprogress": "^5.13.1",
     "gatsby-plugin-postcss": "^6.13.1",
+    "gatsby-plugin-react-svg": "^3.3.0",
     "gatsby-plugin-sharp": "^5.12.0",
     "gatsby-plugin-transition-link": "^1.20.5",
     "gatsby-source-filesystem": "^5.12.0",

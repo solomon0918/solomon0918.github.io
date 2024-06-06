@@ -3,7 +3,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink";
 import { AppBar, IconButton, Drawer, List, ListItemText, Toolbar, Box, useMediaQuery, ListItemButton, Divider, useScrollTrigger } from '@mui/material';
 import { useLocation } from "@reach/router";
 import MenuIcon from '@mui/icons-material/Menu';
-import logo from '../assets/Erwin-logo.png';
+import logo from '../images/Erwin-Mark-Logo.png';
 
 const Header = ({ siteTitle }) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -72,7 +72,7 @@ const Header = ({ siteTitle }) => {
         >
         <Toolbar>
           <div className="flex-grow">
-            <img src={logo} height={48} width={84} alt={siteTitle} className="cursor-pointer" />
+            <img src={logo} alt={siteTitle} className="cursor-pointer" style={{ width: '110px' }} />
           </div>
           
           {isMobile ? (
