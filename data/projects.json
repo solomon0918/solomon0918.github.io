@@ -21,6 +21,32 @@
     ]
   },
   {
+    "title": "Easy BDI Course",
+    "company": "Freelance",
+    "description": "EasyBDI is a modern Learning Management System (LMS) built with Vue.js and Laravel, designed specifically for individuals taking BDI courses. It offers an intuitive interface for accessing and managing course materials, engaging with interactive learning modules, and completing customizable exams. Upon passing exams, learners receive their certificates automatically. EasyBDI ensures a secure, scalable, and user-friendly experience, making it the ideal platform for your BDI certification journey.",
+    "slug": "easybdi",
+    "image": "easybdi/home-page.png",
+    "images": [
+      "easybdi/home-page.png",
+      "easybdi/contact-us-page.png",
+      "easybdi/signup-page.png",
+      "easybdi/payment-page.png",
+      "easybdi/license-information-page.png",
+      "easybdi/security-questions-page.png",
+      "easybdi/user-dashboard-page.png",
+      "easybdi/profile-page.png",
+      "easybdi/taking-course-1-page.png",
+      "easybdi/taking-course-quiz-page.png",
+      "easybdi/taking-course-quiz-result-failed-page.png",
+      "easybdi/taking-course-quiz-result-page.png",
+      "easybdi/finish-page.png",
+      "easybdi/dashboard-page.png",
+      "easybdi/course-details-page.png",
+      "easybdi/course-exam-page.png",
+      "easybdi/email-templates-page.png"
+    ]
+  },
+  {
     "title": "Virtual Assistants Finder",
     "company": "VirtualStaff PH",
     "description": "Developed a new application from scratch for finding virtual assistants using ReactJS. The application features comprehensive dashboards for both employers and job seekers, including functionalities such as real-time chat, time tracking, job postings, and application management. It also offers search filters and profile management to streamline the hiring process. The goal was to revamp their site, enhancing user experience, performance, and overall efficiency.",
