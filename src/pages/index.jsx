@@ -127,7 +127,7 @@ const IndexPage = ({ data }) => {
             <img
               src={meImage}
               className="tw-transition tw-ease-in-out hover:tw--translate-y-1"
-              width={400}
+              width={450}
               loading="eager"
               alt="Erwin Mark Image Portfolio"
             />
