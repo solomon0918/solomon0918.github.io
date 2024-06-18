@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkerwin_mark_anora_eportfolio=self.webpackChunkerwin_mark_anora_eportfolio||[]).push([[497],{872:function(e,t,n){n.r(t),n.d(t,{Head:function(){return c}});var a=n(7294),o=n(4854),r=n(2706),l=n(9357);const c=()=>a.createElement(l.Z,{title:"Page two"});t.default=()=>a.createElement(r.Z,null,a.createElement("h1",null,"Hi from the second page"),a.createElement("p",null,"Welcome to page 2"),a.createElement(o.Link,{to:"/"},"Go back to the homepage"))}}]);
-//# sourceMappingURL=component---src-pages-page-2-jsx-0bd005d4d48502c88f60.js.map
