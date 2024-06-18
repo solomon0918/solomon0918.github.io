@@ -47,7 +47,10 @@ const ProjectTemplate = ({ data }) => {
         <div className="tw-container tw-flex tw-h-full tw-flex-col tw-content-center tw-items-center tw-justify-center">
           <Breadcrumbs
             separator={
-              <NavigateNextIcon fontSize="small" className="tw-text-white" />
+              <NavigateNextIcon
+                fontSize="small"
+                className="tw-text-black dark:tw-text-white"
+              />
             }
             aria-label="breadcrumb"
             style={{ fontFamily: "Outfit", letterSpacing: "0.1em" }}
@@ -56,24 +59,24 @@ const ProjectTemplate = ({ data }) => {
               cover
               bg="#024950"
               to={`/projects`}
-              className="tw-uppercase tw-text-inherit tw-text-white"
+              className="tw-uppercase tw-text-black tw-text-inherit dark:tw-text-white"
             >
               <span style={{ textDecoration: "underline" }}>Projects</span>
             </AniLink>
             <Typography
-              className="tw-text-[12px] tw-uppercase md:tw-text-[19px]"
-              style={{ fontFamily: "Outfit", color: "#f0f0f0" }}
+              className="tw-text-[12px] tw-uppercase tw-text-black md:tw-text-[19px] dark:tw-text-white"
+              style={{ fontFamily: "Outfit" }}
             >
               {project.title}
             </Typography>
           </Breadcrumbs>
           <h1
-            className="tw-text-center tw-text-5xl tw-font-bold tw-uppercase tw-tracking-widest tw-text-white"
+            className="tw-text-center tw-text-5xl tw-font-bold tw-uppercase tw-tracking-widest tw-text-black dark:tw-text-white"
             style={{ padding: "20px 0" }}
           >
             {project.title}
           </h1>
-          <p className="tw-px-0 tw-text-center tw-text-lg tw-tracking-wider tw-text-white md:tw-px-40">
+          <p className="tw-px-0 tw-text-center tw-text-lg tw-tracking-wider tw-text-black md:tw-px-40 dark:tw-text-white">
             {project.description}
           </p>
         </div>
@@ -92,7 +95,7 @@ const ProjectTemplate = ({ data }) => {
             if (image) {
               return (
                 <ImageListItem
-                  className="tw-relative hover:tw-shadow-lg hover:tw-shadow-secondary_light"
+                  className="tw-relative tw-shadow-lg tw-shadow-primary_dark hover:tw-shadow-lg hover:tw-shadow-secondary_light"
                   key={item}
                 >
                   <GatsbyImage

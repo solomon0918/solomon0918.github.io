@@ -3,7 +3,6 @@ import * as React from "react"
 import Layout from "../components/structure/layout"
 import Seo from "../components/common/seo"
 import { Link, graphql } from "gatsby"
-import { Box, Grid } from "@mui/material"
 import FacebookIcon from "@mui/icons-material/Facebook"
 import GitHubIcon from "@mui/icons-material/GitHub"
 import LinkedInIcon from "@mui/icons-material/LinkedIn"
@@ -20,8 +19,8 @@ import VueSVG from "../assets/vue.svg"
 import TailwindSVG from "../assets/tailwind-css.svg"
 import MySQLSVG from "../assets/mysql-original-wordmark.svg"
 import JavascriptSVG from "../assets/javascript-js.svg"
-import HTMLSVG from "../assets/file-type-html.svg"
-import CSSSVG from "../assets/file-type-css.svg"
+import HtmlSVG from "../assets/file-type-html.svg"
+import CssSVG from "../assets/file-type-css.svg"
 import { useState } from "react"
 
 const IndexPage = ({ data }) => {
@@ -61,11 +60,11 @@ const IndexPage = ({ data }) => {
     },
     {
       title: "HTML",
-      image: <HTMLSVG />,
+      image: <HtmlSVG />,
     },
     {
       title: "CSS",
-      image: <CSSSVG />,
+      image: <CssSVG />,
     },
   ]
 
@@ -77,11 +76,11 @@ const IndexPage = ({ data }) => {
           className="tw-grid tw-grid-cols-1 tw-place-items-center tw-gap-4 tw-fade-up md:tw-grid-cols-3"
         >
           <div className="tw-col-span-2">
-            <div className="tw-ml-0 tw-space-y-6 tw-text-white md:tw-ml-14">
+            <div className="tw-ml-0 tw-space-y-6 md:tw-ml-14">
               <h2 className="tw-text-4xl tw-font-bold tw-uppercase">Hi, I'm</h2>
               <div className="tw-mr-15 tw-text-center">
                 <div className="tw-relative">
-                  <div className="tw-absolute tw-left-4 tw-hidden tw-h-full tw-w-4 tw-bg-secondary sm:tw-block"></div>
+                  <div className="tw-absolute tw-left-4 tw-hidden tw-h-full tw-w-4 tw-bg-primary_dark sm:tw-block dark:tw-bg-secondary"></div>
                   <h1 className="tw-text-5xl tw-font-bold tw-uppercase">
                     Erwin Mark Añora
                   </h1>
@@ -141,7 +140,7 @@ const IndexPage = ({ data }) => {
       >
         <div className="tw-space-y-12">
           <div className="tw-relative">
-            <div className="tw-absolute tw--left-6 tw-hidden tw-h-full tw-w-4 tw-bg-secondary sm:tw-block"></div>
+            <div className="tw-absolute tw--left-6 tw-hidden tw-h-full tw-w-4 tw-bg-primary_dark sm:tw-block dark:tw-bg-secondary"></div>
             <h1 className="tw-text-5xl tw-font-bold tw-uppercase">
               Recent Projects
             </h1>
@@ -159,7 +158,7 @@ const IndexPage = ({ data }) => {
                   return (
                     <div key={node.id} className="tw-relative">
                       <GatsbyImage
-                        className="tw-w-auto tw-object-cover"
+                        className="tw-w-auto tw-object-cover tw-shadow-lg tw-shadow-primary_dark dark:tw-shadow-none"
                         image={image.node.childImageSharp.gatsbyImageData}
                         style={{
                           width: "100%",
@@ -208,7 +207,7 @@ const IndexPage = ({ data }) => {
       >
         <div className="tw-flex tw-justify-center tw-space-y-12">
           <div className="tw-relative">
-            <div className="tw-absolute tw--left-6 tw-hidden tw-h-full tw-w-4 tw-bg-secondary sm:tw-block"></div>
+            <div className="tw-absolute tw--left-6 tw-hidden tw-h-full tw-w-4 tw-bg-primary_dark sm:tw-block dark:tw-bg-secondary"></div>
             <h1 className="tw-text-5xl tw-font-bold tw-uppercase">My Skills</h1>
           </div>
         </div>
@@ -219,10 +218,10 @@ const IndexPage = ({ data }) => {
             return (
               <div
                 key={index}
-                className="tw-flex tw-flex-col tw-items-center tw-justify-center tw-rounded-md tw-bg-primary tw-py-12 tw-shadow-sm tw-shadow-secondary hover:tw-shadow-lg hover:tw-shadow-secondary"
+                className="tw-flex tw-flex-col tw-items-center tw-justify-center tw-rounded-md tw-bg-primary tw-py-12 tw-shadow-sm tw-shadow-secondary tw-transition-all hover:tw-shadow-lg hover:tw-shadow-primary_dark hover:dark:tw-shadow-secondary"
               >
                 {skill.image}
-                <h6 className="tw-pt-6 tw-text-center tw-text-lg tw-uppercase">
+                <h6 className="tw-pt-6 tw-text-center tw-text-lg tw-uppercase tw-text-white">
                   {skill.title}
                 </h6>
               </div>

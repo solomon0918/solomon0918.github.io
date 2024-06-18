@@ -9,12 +9,12 @@ const ComingSoonPage = () => (
       <div className="tw-flex tw-h-full tw-flex-col tw-content-center tw-items-center tw-justify-center">
         <div className="tw-text-center">
           <div className="tw-px-20">
-            <WhatshotIcon className="tw-text-[50px] tw-text-white md:tw-text-7xl" />
-            <h1 className="tw-text-7xl tw-font-extrabold tw-uppercase tw-text-white tw-text-shadow-lg md:!tw-text-9xl">
+            <WhatshotIcon className="tw-text-[50px] md:tw-text-7xl" />
+            <h1 className="tw-text-shadow-lg tw-text-7xl tw-font-extrabold tw-uppercase md:!tw-text-9xl">
               Coming <br />
               Soon!
             </h1>
-            <p className="tw-py-3 tw-text-[19px] tw-uppercase tw-text-white tw-text-shadow-md">
+            <p className="tw-text-shadow-md tw-py-3 tw-text-[19px] tw-uppercase">
               Stay Tuned!
             </p>
           </div>

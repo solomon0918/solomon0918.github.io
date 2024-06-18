@@ -33,7 +33,7 @@ const theme = createTheme({
     MuiTimelineConnector: {
       styleOverrides: {
         root: {
-          backgroundColor: "#FFF", // Override TimelineConnector primary color
+          backgroundColor: "rgba(var(--text))", // Override TimelineConnector primary color
         },
       },
     },
@@ -50,7 +50,7 @@ const AboutPage = () => {
       <section className="tw-container tw-mx-auto tw-py-20">
         <div className="tw-flex tw-flex-col">
           <div className="tw-relative">
-            <div className="tw-absolute tw--left-6 tw-hidden tw-h-full tw-w-4 tw-bg-secondary sm:tw-block"></div>
+            <div className="tw-absolute tw--left-6 tw-hidden tw-h-full tw-w-4 tw-bg-primary_dark sm:tw-block dark:tw-bg-secondary"></div>
             <h1 className="tw-text-5xl tw-font-bold tw-uppercase">About Me</h1>
           </div>
           <p className="tw-w-full tw-text-base tw-uppercase md:tw-w-[80%]">
@@ -62,7 +62,7 @@ const AboutPage = () => {
           </p>
         </div>
 
-        <div className="tw-fade-up tw-py-8" ref={timelineRef}>
+        <div className="tw-py-8 tw-fade-up" ref={timelineRef}>
           <ThemeProvider theme={theme}>
             {isMobile ? (
               <Timeline
@@ -268,7 +268,7 @@ const AboutPage = () => {
               >
                 <TimelineItem>
                   <TimelineOppositeContent>
-                    <p className="tw-rounded-lg tw-bg-gray-500 tw-py-2 tw-text-center tw-text-base tw-uppercase">
+                    <p className="tw-rounded-lg tw-bg-gray-500 tw-py-2 tw-text-center tw-text-base tw-uppercase tw-text-white">
                       Nov 2023 - Present
                     </p>
                   </TimelineOppositeContent>
@@ -299,7 +299,7 @@ const AboutPage = () => {
                 </TimelineItem>
                 <TimelineItem>
                   <TimelineOppositeContent>
-                    <p className="tw-rounded-lg tw-bg-gray-500 tw-py-2 tw-text-center tw-text-base tw-uppercase">
+                    <p className="tw-rounded-lg tw-bg-gray-500 tw-py-2 tw-text-center tw-text-base tw-uppercase tw-text-white">
                       Oct 2022 - Oct 2023
                     </p>
                   </TimelineOppositeContent>
@@ -330,7 +330,7 @@ const AboutPage = () => {
                 </TimelineItem>
                 <TimelineItem>
                   <TimelineOppositeContent>
-                    <p className="tw-rounded-lg tw-bg-gray-500 tw-py-2 tw-text-center tw-text-base tw-uppercase">
+                    <p className="tw-rounded-lg tw-bg-gray-500 tw-py-2 tw-text-center tw-text-base tw-uppercase tw-text-white">
                       Feb 2022 - Oct 2022
                     </p>
                   </TimelineOppositeContent>
@@ -355,7 +355,7 @@ const AboutPage = () => {
                 </TimelineItem>
                 <TimelineItem>
                   <TimelineOppositeContent>
-                    <p className="tw-rounded-lg tw-bg-gray-500 tw-py-2 tw-text-center tw-text-base tw-uppercase">
+                    <p className="tw-rounded-lg tw-bg-gray-500 tw-py-2 tw-text-center tw-text-base tw-uppercase tw-text-white">
                       Aug 2020 - Jun 2021
                     </p>
                   </TimelineOppositeContent>
@@ -379,7 +379,7 @@ const AboutPage = () => {
                 </TimelineItem>
                 <TimelineItem>
                   <TimelineOppositeContent>
-                    <p className="tw-rounded-lg tw-bg-gray-500 tw-py-2 tw-text-center tw-text-base tw-uppercase">
+                    <p className="tw-rounded-lg tw-bg-gray-500 tw-py-2 tw-text-center tw-text-base tw-uppercase tw-text-white">
                       May 2018 - Jun 2022
                     </p>
                   </TimelineOppositeContent>
@@ -421,7 +421,7 @@ const AboutPage = () => {
                 </TimelineItem>
                 <TimelineItem>
                   <TimelineOppositeContent>
-                    <p className="tw-rounded-lg tw-bg-gray-500 tw-py-2 tw-text-center tw-text-base tw-uppercase">
+                    <p className="tw-rounded-lg tw-bg-gray-500 tw-py-2 tw-text-center tw-text-base tw-uppercase tw-text-white">
                       Mar 2017 - Jun 2018
                     </p>
                   </TimelineOppositeContent>
@@ -455,7 +455,7 @@ const AboutPage = () => {
                 </TimelineItem>
                 <TimelineItem>
                   <TimelineOppositeContent>
-                    <p className="tw-rounded-lg tw-bg-gray-500 tw-py-2 tw-text-center tw-text-base tw-uppercase">
+                    <p className="tw-rounded-lg tw-bg-gray-500 tw-py-2 tw-text-center tw-text-base tw-uppercase tw-text-white">
                       Mar 2016 - Feb 2017
                     </p>
                   </TimelineOppositeContent>

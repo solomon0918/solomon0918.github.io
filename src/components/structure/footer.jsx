@@ -41,7 +41,7 @@ const Footer = () => {
                   Resume
                 </a>
               </div>
-              <p className="tw-text-base tw-text-white">
+              <p className="tw-text-base">
                 © {new Date().getFullYear()} Erwin Mark Anora E-Portfolio
               </p>
             </div>

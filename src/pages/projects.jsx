@@ -23,7 +23,7 @@ const ProjectsPage = ({ data }) => {
       <section className="tw-container tw-mx-auto tw-py-20">
         <div className="tw-flex tw-flex-col">
           <div className="tw-relative">
-            <div className="tw-absolute tw--left-6 tw-hidden tw-h-full tw-w-4 tw-bg-secondary sm:tw-block"></div>
+            <div className="tw-absolute tw--left-6 tw-hidden tw-h-full tw-w-4 tw-bg-primary_dark sm:tw-block dark:tw-bg-secondary"></div>
             <h1 className="tw-text-5xl tw-font-bold tw-uppercase">
               My Projects
             </h1>
@@ -48,7 +48,7 @@ const ProjectsPage = ({ data }) => {
               return (
                 <ImageListItem
                   key={node.id}
-                  className="tw-relative hover:tw-shadow-lg hover:tw-shadow-secondary_light"
+                  className="tw-relative tw-shadow-lg tw-shadow-primary_dark hover:tw-shadow-lg hover:tw-shadow-secondary_light dark:tw-shadow-none"
                 >
                   <GatsbyImage
                     className="tw-w-auto tw-object-cover"

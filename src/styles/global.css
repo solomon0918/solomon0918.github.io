@@ -4,8 +4,26 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --background-light: 245, 245, 245;
+  --background-dark: 0, 49, 53;
+  --text-light: 0, 0, 0;
+  --text-dark: 255, 255, 255;
+}
+
+.tw-light {
+  --background: var(--background-light);
+  --text: var(--text-light);
+}
+
+.tw-dark {
+  --background: var(--background-dark);
+  --text: var(--text-dark);
+}
+
 html,
 body {
   margin: 0;
-  background: #003135;
+  background-color: rgba(var(--background));
+  color: rgba(var(--text));
 }
