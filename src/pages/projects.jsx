@@ -1,92 +1,119 @@
-import * as React from 'react';
-import Layout from '../components/layout';
-import Seo from '../components/seo';
-import { graphql } from 'gatsby'
-import { Divider, Card, CardContent, CardActions } from '@mui/material';
-import Typography from '@mui/material/Typography';
-import AniLink from "gatsby-plugin-transition-link/AniLink";
-import { GatsbyImage } from "gatsby-plugin-image";
-import projects from '../../data/projects.json';
+import * as React from "react"
+import { useState } from "react"
+import Layout from "../components/structure/layout"
+import Seo from "../components/common/seo"
+import { Link, graphql } from "gatsby"
+import { ImageList, ImageListItem, useMediaQuery } from "@mui/material"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+import DoubleArrowIcon from "@mui/icons-material/DoubleArrow"
+import { GatsbyImage } from "gatsby-plugin-image"
+import useInView from "../components/common/hooks/useInView"
 
 const ProjectsPage = ({ data }) => {
+  const projects = data.allProjectsJson
+  const images = data.allFile
+
+  const isMobile = useMediaQuery("(max-width:600px)")
+
+  const projectsRef = useInView()
+  const [hoveredProject, setHoveredProject] = useState(null)
+
   return (
     <Layout>
-      <section className="h-screen">
-        <div className="container h-full flex flex-col items-center content-center justify-center">
-          <h1 className="text-[40px] md:text-[70px] font-bold uppercase text-white text-center tracking-widest">My Projects</h1>
-          <h6 className="text-white text-center text-[16px] md:text-[25px] px-0 md:px-40 tracking-wider">Delivering excellence across diverse industries through versatile and impactful projects.</h6>
+      <section className="tw-container tw-mx-auto tw-py-20">
+        <div className="tw-flex tw-flex-col">
+          <div className="tw-relative">
+            <div className="tw-absolute tw--left-6 tw-hidden tw-h-full tw-w-4 tw-bg-secondary sm:tw-block"></div>
+            <h1 className="tw-text-5xl tw-font-bold tw-uppercase">
+              My Projects
+            </h1>
+          </div>
+          <p className="tw-w-full tw-text-base tw-uppercase md:tw-w-[80%]">
+            Delivering excellence across diverse industries through versatile
+            and impactful projects.
+          </p>
         </div>
       </section>
-      <Divider style={{ background: 'linear-gradient(90deg, #004AAD, #5DE0E6)' }} />
-      <div className="container flex flex-col text-white py-5 space-y-4 px-0 md:px-[200px]">
-        {projects?.map((project, index) => {
-          const item = data.allFile.edges.find(edge => edge.node.relativePath === project.image);
-
-          if (item) {
-            return (
-              <div className="py-32" key={index}>
-                <Card variant="outlined" className="transition duration-200 ease-in-out transform hover:drop-shadow-2xl hover:shadow-2xl">
-                  <div className='h-auto md:h-[550px] w-auto overflow-hidden'>
-                    <GatsbyImage
-                      className="h-full w-auto object-cover"
-                      image={item.node.childImageSharp.gatsbyImageData}
-                      style={{ width: "100%", height: "auto" }}
-                      formats={["auto", "webp"]}
-                      loading="lazy"
-                      alt={project.title} 
-                    />
-                  </div>
-                  
-                  <CardContent>
-                    <Typography variant="h5" className="uppercase font-bold">
-                      {project.title}
-                    </Typography>
-                    <Typography variant="caption" className="uppercase" color="text.secondary">
-                      {project.company}
-                    </Typography>
-                    <Typography variant="body1" color="text.secondary">
-                      {project.description}
-                    </Typography>
-                  </CardContent>
-
-                  <CardActions className="px-4 !pb-6">
-                    <AniLink 
-                      cover 
-                      bg="#004AAD"
-                      to={`/projects/${project.slug}`} 
-                      className="transition ease-in-out border-2 border-primary px-3 py-1 hover:bg-transparent text-primary hover:bg-primary hover:-translate-y-1 rounded-md duration-300"
-                    >
-                    <span className="font-bold">Learn More</span>
-                    </AniLink>
-                  </CardActions>
-                </Card>    
-              </div> 
+      <div
+        ref={projectsRef}
+        className="tw-delay-400 tw-container tw-flex tw-flex-col tw-space-y-4 tw-px-0 tw-py-12 tw-text-white tw-fade-up md:tw-px-[200px]"
+      >
+        <ImageList variant="masonry" cols={isMobile ? 1 : 2} gap={32}>
+          {projects.edges.map(({ node }, index) => {
+            const image = images.edges.find(
+              edge => edge.node.relativePath === node.image,
             )
-          }
-          
-          return <></>;
-        })}
+
+            if (image) {
+              return (
+                <ImageListItem
+                  key={node.id}
+                  className="tw-relative hover:tw-shadow-lg hover:tw-shadow-secondary_light"
+                >
+                  <GatsbyImage
+                    className="tw-w-auto tw-object-cover"
+                    image={image.node.childImageSharp.gatsbyImageData}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                    }}
+                    formats={["auto", "webp"]}
+                    loading="lazy"
+                    alt={node.title}
+                  />
+
+                  <div
+                    className="tw-overlay tw-absolute tw-left-0 tw-top-0 tw-flex tw-h-full tw-w-full tw-flex-col tw-items-center tw-justify-center tw-bg-black tw-bg-opacity-50 tw-text-center tw-text-white tw-opacity-0 tw-transition-all hover:tw-opacity-100"
+                    onMouseEnter={() => setHoveredProject(index)}
+                    onMouseLeave={() => setHoveredProject(null)}
+                  >
+                    {hoveredProject === index && (
+                      <div className="tw-flex tw-flex-col tw-space-y-3">
+                        <h4 className="tw-text-xl">{node.title}</h4>
+                        <Link to={`/projects/${node.slug}`}>
+                          <DoubleArrowIcon className="!tw-text-[40px] tw-text-secondary_light" />
+                        </Link>
+                      </div>
+                    )}
+                  </div>
+                </ImageListItem>
+              )
+            }
+
+            return <></>
+          })}
+        </ImageList>
       </div>
     </Layout>
-  );
+  )
 }
 
 export const query = graphql`
-  query ProjectsPageQuery {
-      allFile(filter: { sourceInstanceName: { eq: "images" } }) {
-        edges {
-          node {
-            relativePath
-            childImageSharp {
-              gatsbyImageData(layout: CONSTRAINED)
-            }
+  query ProjectsFeaturedQuery {
+    allProjectsJson {
+      edges {
+        node {
+          id
+          company
+          image
+          slug
+          title
+        }
+      }
+    }
+    allFile(filter: { sourceInstanceName: { eq: "images" } }) {
+      edges {
+        node {
+          relativePath
+          childImageSharp {
+            gatsbyImageData(layout: CONSTRAINED)
           }
         }
-     }
+      }
+    }
   }
 `
 
-
 export const Head = () => <Seo title="My Projects" />
- 
-export default ProjectsPage;
+
+export default ProjectsPage

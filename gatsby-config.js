@@ -36,10 +36,10 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/Erwin-Mark-favicon-v1-1.png`, // This path is relative to the root of the site.
+        icon: `src/images/logo-favicon.png`, // This path is relative to the root of the site.
       },
     },
-    'gatsby-plugin-postcss',
+    "gatsby-plugin-postcss",
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
@@ -47,7 +47,7 @@ module.exports = {
         showSpinner: false,
       },
     },
-    'gatsby-plugin-transition-link',
+    "gatsby-plugin-transition-link",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -55,14 +55,14 @@ module.exports = {
         path: `./data/`,
       },
     },
-    'gatsby-transformer-json',
+    "gatsby-transformer-json",
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /assets/ // See below to configure properly
-        }
-      }
-    }
+          include: /assets/, // See below to configure properly
+        },
+      },
+    },
   ],
 }
