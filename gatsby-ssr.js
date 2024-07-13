@@ -7,6 +7,13 @@
 /**
  * @type {import('gatsby').GatsbySSR['onRenderBody']}
  */
-exports.onRenderBody = ({ setHtmlAttributes }) => {
-  setHtmlAttributes({ lang: `en` })
-}
+
+import { CookiesProvider } from "react-cookie"
+import ThemeProvider from "./src/components/common/context/ThemeContext"
+import React from "react"
+
+export const wrapRootElement = ({ element }) => (
+  <CookiesProvider>
+    <ThemeProvider>{element}</ThemeProvider>
+  </CookiesProvider>
+)

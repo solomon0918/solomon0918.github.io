@@ -21,13 +21,15 @@ import useDarkMode from "../common/hooks/useDarkMode"
 
 import DarkModeSwitch from "../DarkModeSwitch"
 import { useEffect } from "react"
+import { useContext } from "react"
+import { ThemeContext } from "../common/context/ThemeContext"
 
 const Header = ({ siteTitle }) => {
   const [drawerOpen, setDrawerOpen] = useState(false)
   const { pathname } = useLocation()
   const isMobile = useMediaQuery("(max-width:600px)")
-  const [theme, toggleTheme] = useDarkMode()
-  const [themeLogo, setThemeLogo] = useState(logo)
+  // const [theme] = useDarkMode()
+  const { theme } = useContext(ThemeContext)
 
   const trigger = useScrollTrigger({
     disableHysteresis: true,
@@ -40,7 +42,7 @@ const Header = ({ siteTitle }) => {
 
   const isActive = path => {
     return isCurrent(path)
-      ? "tw-border-b-black dark:tw-border-b-white tw-border-b-2"
+      ? "tw-border-b-black dark:tw-border-b-white tw-border-b-0 md:tw-border-b-2"
       : undefined
   }
 
@@ -56,7 +58,6 @@ const Header = ({ siteTitle }) => {
 
   const navLinks = (
     <>
-      <DarkModeSwitch colorTheme={theme} toggle={toggleTheme} />
       <AniLink
         paintDrip
         hex="#024950"
@@ -127,9 +128,117 @@ const Header = ({ siteTitle }) => {
             </a>
           </div>
 
-          {isMobile ? (
+          <div className="tw-px-2 md:tw-px-7">
+            <DarkModeSwitch />
+          </div>
+
+          {/* Mobile Navbar */}
+          <div className="tw-block md:tw-hidden">
+            <IconButton
+              edge="end"
+              color="inherit"
+              className="!tw-text-black dark:!tw-text-white"
+              aria-label="menu"
+              onClick={toggleDrawer(true)}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Drawer
+              anchor="right"
+              open={drawerOpen}
+              onClose={toggleDrawer(false)}
+            >
+              <List
+                onClick={toggleDrawer(false)}
+                onKeyDown={toggleDrawer(false)}
+              >
+                <ListItemButton>
+                  <ListItemText
+                    primary={
+                      <AniLink
+                        paintDrip
+                        hex="#024950"
+                        to="/"
+                        className={`tw-px-[100px] ${isActive("/")}`}
+                      >
+                        Home
+                      </AniLink>
+                    }
+                  />
+                </ListItemButton>
+                <Divider />
+                <ListItemButton>
+                  <ListItemText
+                    primary={
+                      <AniLink
+                        paintDrip
+                        hex="#024950"
+                        to="/about"
+                        className={`tw-px-[100px] ${isActive("/about/")}`}
+                      >
+                        About
+                      </AniLink>
+                    }
+                  />
+                </ListItemButton>
+                <Divider />
+                <ListItemButton>
+                  <ListItemText
+                    primary={
+                      <AniLink
+                        paintDrip
+                        hex="#024950"
+                        to="/blog"
+                        className={`tw-px-[100px] ${isActive("/blog/")}`}
+                      >
+                        Blog
+                      </AniLink>
+                    }
+                  />
+                </ListItemButton>
+                <Divider />
+                <ListItemButton>
+                  <ListItemText
+                    primary={
+                      <AniLink
+                        paintDrip
+                        hex="#024950"
+                        to="/projects"
+                        className={`tw-px-[100px] ${isActive("/projects/")}`}
+                      >
+                        Projects
+                      </AniLink>
+                    }
+                  />
+                </ListItemButton>
+                <Divider />
+                <ListItemButton>
+                  <ListItemText
+                    primary={
+                      <a
+                        href="https://drive.google.com/file/d/1ShWFHPyZQJ4lFAu_AdO2oXgmeiRgYOKD/view?usp=sharing"
+                        rel="noreferrer"
+                        target="_blank"
+                        className="py-2 tw-px-[100px]"
+                      >
+                        Resume
+                      </a>
+                    }
+                  />
+                </ListItemButton>
+                <Divider />
+              </List>
+            </Drawer>
+          </div>
+
+          {/* Default Navbar */}
+          <div className="tw-hidden tw-items-center tw-space-x-16 tw-uppercase md:tw-flex">
+            {navLinks}
+          </div>
+
+          {/* {isMobile ? (
             <>
-              <DarkModeSwitch colorTheme={theme} toggle={toggleTheme} />
+              <DarkModeSwitch />
               <IconButton
                 edge="end"
                 color="inherit"
@@ -230,7 +339,7 @@ const Header = ({ siteTitle }) => {
             <div className="tw-flex tw-items-center tw-space-x-16 tw-uppercase">
               {navLinks}
             </div>
-          )}
+          )} */}
         </Toolbar>
       </AppBar>
     </Box>
