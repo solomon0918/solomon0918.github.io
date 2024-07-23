@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "Scott Hullinger",
+    "description": "Like a keystone, Erwin’s contributions to California Ticket King are integral to its success as a leader in online-attorney-ticket-resolution. He has built, tested and implemented PHP using Slim and Laravel libraries. He is timely, consistent and persistent, qualities seen only in full stack engineers.",
+    "image": "testimonials/scott-hullinger.png"
+  },
+  {
+    "id": 2,
+    "name": "Gemini Bataican",
+    "description": "We hired Erwin to collaborate with us for a web app payment system. He is outstanding to work with, smart and attentive. He gave input on how to make the app even better. We are genuinely happy with the result. We will always consider him in our other coming projects. I would highly recommend his services to anyone.",
+    "image": "testimonials/gemini-bataican.jpg"
+  }
+]

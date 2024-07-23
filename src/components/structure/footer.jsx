@@ -17,6 +17,7 @@ const Footer = () => {
               src={theme === "dark" ? logo : darkLogo}
               className="tw-mr-2"
               style={{ width: "65px" }}
+              alt="Erwin Portfolio Logo"
             />
 
             <p className="tw-text-base tw-uppercase">

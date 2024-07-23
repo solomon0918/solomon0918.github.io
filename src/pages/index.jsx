@@ -22,14 +22,17 @@ import JavascriptSVG from "../assets/javascript-js.svg"
 import HtmlSVG from "../assets/file-type-html.svg"
 import CssSVG from "../assets/file-type-css.svg"
 import { useState } from "react"
+import Testimonial from "../components/Testimonial"
 
 const IndexPage = ({ data }) => {
   const projects = data.allProjectsJson
+  const testimonials = data.allTestimonialsJson
   const images = data.allFile
 
   const aboutRef = useInView()
   const projectsRef = useInView()
   const mySkillsRef = useInView()
+  const myTestimonialsRef = useInView()
 
   const [hoveredProject, setHoveredProject] = useState(null)
 
@@ -128,9 +131,42 @@ const IndexPage = ({ data }) => {
               className="tw-transition tw-ease-in-out hover:tw--translate-y-1"
               width={450}
               loading="eager"
-              alt="Erwin Mark Image Portfolio"
+              alt="Erwin Mark"
             />
           </div>
+        </div>
+      </div>
+
+      <div
+        ref={myTestimonialsRef}
+        className="md:pb-0 tw-container tw-mx-auto tw-pb-40 tw-fade-up"
+      >
+        <div className="tw-flex tw-justify-center tw-space-y-12">
+          <div className="tw-relative">
+            <div className="tw-absolute tw--left-6 tw-hidden tw-h-full tw-w-4 tw-bg-primary_dark sm:tw-block dark:tw-bg-secondary"></div>
+            <h1 className="tw-text-5xl tw-font-bold tw-uppercase tw-tracking-wider">
+              Testimonials
+            </h1>
+          </div>
+        </div>
+
+        {/* List of Testimonials */}
+        <div className="tw-grid tw-grid-cols-1 tw-gap-6 tw-pt-0 md:tw-grid-cols-2 md:tw-pt-28">
+          {testimonials.edges.map(({ node }) => {
+            const image = images.edges.find(
+              edge => edge.node.relativePath === node.image,
+            )
+
+            if (!image) return <></>
+
+            return (
+              <Testimonial
+                image={image}
+                name={node.name}
+                description={node.description}
+              />
+            )
+          })}
         </div>
       </div>
 
@@ -170,6 +206,7 @@ const IndexPage = ({ data }) => {
                       />
 
                       <div
+                        role="presentation"
                         className="tw-overlay tw-absolute tw-left-0 tw-top-0 tw-flex tw-h-full tw-w-full tw-flex-col tw-items-center tw-justify-center tw-bg-black tw-bg-opacity-50 tw-text-center tw-text-white tw-opacity-0 tw-transition-all hover:tw-opacity-100"
                         onMouseEnter={() => setHoveredProject(index)}
                         onMouseLeave={() => setHoveredProject(null)}
@@ -243,6 +280,16 @@ export const query = graphql`
           image
           slug
           title
+        }
+      }
+    }
+    allTestimonialsJson {
+      edges {
+        node {
+          id
+          image
+          name
+          description
         }
       }
     }
