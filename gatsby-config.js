@@ -10,11 +10,12 @@
 module.exports = {
   siteMetadata: {
     title: `Erwin Mark Anora Portfolio`,
-    description: `Welcome to Erwin Mark Anora's personal portfolio. As a passionate and skilled full stack developer, I specialize in both front-end and back-end development. Explore my projects and experience in creating seamless user experiences with modern front-end technologies like HTML, CSS, JavaScript, and React. Delve into my expertise in robust back-end development using PHP, Laravel and database management with SQL. Discover how I integrate these technologies to build dynamic, responsive, and high-performance web applications. Whether you're here to collaborate, learn, or hire, you'll find a showcase of my work, skills, and dedication to continuous improvement in the world of full stack development.`,
+    description: `Welcome to Erwin Mark Anora's personal portfolio. As a passionate and skilled full stack developer, I specialize in both front-end and back-end development. Explore my projects and experience in creating seamless user experiences with modern front-end technologies like Vue, React, and TailwindCSS. Delve into my expertise in robust back-end development using PHP, Laravel and database management with SQL. Discover how I integrate these technologies to build dynamic, responsive, and high-performance web applications. Whether you're here to collaborate, learn, or hire, you'll find a showcase of my work, skills, and dedication to continuous improvement in the world of full stack development.`,
     author: `@solomon0918`,
-    siteUrl: `https://solomon0918.github.io/`,
+    siteUrl: `https://github.com/solomon0918/solomon0918.github.io`,
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -57,11 +58,9 @@ module.exports = {
     },
     "gatsby-transformer-json",
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: `gatsby-plugin-svgr`,
       options: {
-        rule: {
-          include: /assets/, // See below to configure properly
-        },
+        svgo: false,
       },
     },
   ],

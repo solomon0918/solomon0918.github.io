@@ -4,7 +4,6 @@ import Layout from "../components/structure/layout"
 import Seo from "../components/common/seo"
 import { Link, graphql } from "gatsby"
 import { ImageList, ImageListItem, useMediaQuery } from "@mui/material"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 import DoubleArrowIcon from "@mui/icons-material/DoubleArrow"
 import { GatsbyImage } from "gatsby-plugin-image"
 import useInView from "../components/common/hooks/useInView"
@@ -63,6 +62,7 @@ const ProjectsPage = ({ data }) => {
                   />
 
                   <div
+                    role="presentation"
                     className="tw-overlay tw-absolute tw-left-0 tw-top-0 tw-flex tw-h-full tw-w-full tw-flex-col tw-items-center tw-justify-center tw-bg-black tw-bg-opacity-50 tw-text-center tw-text-white tw-opacity-0 tw-transition-all hover:tw-opacity-100"
                     onMouseEnter={() => setHoveredProject(index)}
                     onMouseLeave={() => setHoveredProject(null)}

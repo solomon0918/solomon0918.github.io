@@ -13,16 +13,25 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { GatsbyImage } from "gatsby-plugin-image"
 import useInView from "../components/common/hooks/useInView"
 
-import LaravelSVG from "../assets/laravel.svg"
-import ReactSVG from "../assets/react-icon.svg"
-import VueSVG from "../assets/vue.svg"
-import TailwindSVG from "../assets/tailwind-css.svg"
-import MySQLSVG from "../assets/mysql-original-wordmark.svg"
-import JavascriptSVG from "../assets/javascript-js.svg"
-import HtmlSVG from "../assets/file-type-html.svg"
-import CssSVG from "../assets/file-type-css.svg"
+import { ReactComponent as LaravelSVG } from "../assets/laravel.svg"
+import { ReactComponent as ReactSVG } from "../assets/react-icon.svg"
+import { ReactComponent as VueSVG } from "../assets/vue.svg"
+import { ReactComponent as TailwindSVG } from "../assets/tailwind-css.svg"
+import { ReactComponent as MySQLSVG } from "../assets/mysql-original-wordmark.svg"
+import { ReactComponent as JavascriptSVG } from "../assets/javascript-js.svg"
+import { ReactComponent as HtmlSVG } from "../assets/file-type-html.svg"
+import { ReactComponent as CssSVG } from "../assets/file-type-css.svg"
 import { useState } from "react"
 import Testimonial from "../components/Testimonial"
+
+const SkillCard = ({ title = "", image = <div>No Image</div> }) => (
+  <div className="tw-flex tw-flex-col tw-items-center tw-justify-center tw-rounded-md tw-bg-primary tw-py-12 tw-shadow-sm tw-shadow-secondary tw-transition-all hover:tw-shadow-lg hover:tw-shadow-primary_dark hover:dark:tw-shadow-secondary">
+    {image}
+    <h6 className="tw-pt-6 tw-text-center tw-text-lg tw-uppercase tw-text-white">
+      {title}
+    </h6>
+  </div>
+)
 
 const IndexPage = ({ data }) => {
   const projects = data.allProjectsJson
@@ -161,6 +170,7 @@ const IndexPage = ({ data }) => {
 
             return (
               <Testimonial
+                key={node.id}
                 image={image}
                 name={node.name}
                 description={node.description}
@@ -251,19 +261,9 @@ const IndexPage = ({ data }) => {
 
         {/* Show List of Skills */}
         <div className="tw-grid tw-grid-cols-1 tw-gap-10 tw-pt-28 md:tw-grid-cols-3">
-          {skills.map((skill, index) => {
-            return (
-              <div
-                key={index}
-                className="tw-flex tw-flex-col tw-items-center tw-justify-center tw-rounded-md tw-bg-primary tw-py-12 tw-shadow-sm tw-shadow-secondary tw-transition-all hover:tw-shadow-lg hover:tw-shadow-primary_dark hover:dark:tw-shadow-secondary"
-              >
-                {skill.image}
-                <h6 className="tw-pt-6 tw-text-center tw-text-lg tw-uppercase tw-text-white">
-                  {skill.title}
-                </h6>
-              </div>
-            )
-          })}
+          {skills.map((skill, index) => (
+            <SkillCard key={index} title={skill.title} image={skill.image} />
+          ))}
         </div>
       </div>
     </Layout>

@@ -30,7 +30,7 @@ const useInView = () => {
       }
     }
     setWasInView(isInView) // Update wasInView state
-  }, [isInView])
+  }, [isInView, wasInView])
 
   return elementRef
 }
