@@ -17,6 +17,7 @@ import { ReactComponent as LaravelSVG } from "../assets/laravel.svg"
 import { ReactComponent as ReactSVG } from "../assets/react-icon.svg"
 import { ReactComponent as VueSVG } from "../assets/vue.svg"
 import { ReactComponent as TailwindSVG } from "../assets/tailwind-css.svg"
+import { ReactComponent as PythonSVG } from "../assets/python.svg"
 import { ReactComponent as MySQLSVG } from "../assets/mysql-original-wordmark.svg"
 import { ReactComponent as JavascriptSVG } from "../assets/javascript-js.svg"
 import { ReactComponent as HtmlSVG } from "../assets/file-type-html.svg"
@@ -61,6 +62,10 @@ const IndexPage = ({ data }) => {
     {
       title: "Tailwind CSS",
       image: <TailwindSVG />,
+    },
+    {
+      title: "Python",
+      image: <PythonSVG />,
     },
     {
       title: "MySQL",
