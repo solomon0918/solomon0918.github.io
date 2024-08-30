@@ -1,5 +1,27 @@
 [
   {
+    "title": "ICEI (Indonesia Cyber Education Institute)",
+    "company": "Cloudswyft Global Services",
+    "description": "ICEI, or the Indonesia Cyber Education Institute, is a comprehensive Learning Management System (LMS) designed to facilitate online education. Built on the robust edX platform, ICEI supports various user roles, including learners, instructors (dosen), partners (mitra), and administrators. The system is designed to provide a seamless educational experience, allowing learners to enroll in courses offered by various partner institutions.",
+    "slug": "icei",
+    "featured": true,
+    "image": "cloudswyft-icei/feature-image.png",
+    "images": [
+      "cloudswyft-icei/admin-dashboard.png",
+      "cloudswyft-icei/course-details.png",
+      "cloudswyft-icei/courses-partner.png",
+      "cloudswyft-icei/courses.png",
+      "cloudswyft-icei/home.png",
+      "cloudswyft-icei/login.png",
+      "cloudswyft-icei/mitra-courses.png",
+      "cloudswyft-icei/mitra-lecturers.png",
+      "cloudswyft-icei/mitra-profile.png",
+      "cloudswyft-icei/news-article.png",
+      "cloudswyft-icei/news.png",
+      "cloudswyft-icei/register.png"
+    ]
+  },
+  {
     "title": "Auction Tale",
     "company": "Offshorly",
     "description": "An advanced auction platform built with Vue.js and Laravel, utilizing Tailwind CSS for a sleek and responsive design. This application enables sellers to list items for auction, buyers to place competitive bids, and administrators to oversee the entire process by approving, rejecting, and scheduling auctions. Key features include real-time updates, user-friendly interfaces, and robust administrative controls. Auction Tale ensures a seamless and efficient auction experience for all users, enhancing the traditional auction process with modern technology.",
@@ -53,7 +75,7 @@
     "company": "VirtualStaff PH",
     "description": "Developed a new application from scratch for finding virtual assistants using ReactJS. The application features comprehensive dashboards for both employers and job seekers, including functionalities such as real-time chat, time tracking, job postings, and application management. It also offers search filters and profile management to streamline the hiring process. The goal was to revamp their site, enhancing user experience, performance, and overall efficiency.",
     "slug": "virtual-assistant-finder",
-    "featured": true,
+    "featured": false,
     "image": "virtualstaff/feature-image.png",
     "images": [
       "virtualstaff/home-page.png",
