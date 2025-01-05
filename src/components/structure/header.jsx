@@ -80,7 +80,7 @@ const Header = ({ siteTitle }) => {
         Projects
       </AniLink>
       <a
-        href="https://drive.google.com/file/d/1ShWFHPyZQJ4lFAu_AdO2oXgmeiRgYOKD/view?usp=sharing"
+        href="https://drive.google.com/file/d/1tcaPceCD3gMgM89YUhsbHph0ZCMrQCZv/view?usp=sharing"
         rel="noreferrer"
         target="_blank"
         className={`tw-rounded-md tw-border-2 tw-border-accent tw-bg-accent tw-px-3 tw-py-2 tw-text-white tw-transition tw-duration-300 tw-ease-in-out hover:tw--translate-y-1`}
@@ -205,7 +205,7 @@ const Header = ({ siteTitle }) => {
                   <ListItemText
                     primary={
                       <a
-                        href="https://drive.google.com/file/d/1ShWFHPyZQJ4lFAu_AdO2oXgmeiRgYOKD/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1tcaPceCD3gMgM89YUhsbHph0ZCMrQCZv/view?usp=sharing"
                         rel="noreferrer"
                         target="_blank"
                         className="py-2 tw-px-[100px]"

@@ -44,7 +44,7 @@ const Footer = () => {
                   Projects
                 </AniLink>
                 <a
-                  href="https://drive.google.com/file/d/1ShWFHPyZQJ4lFAu_AdO2oXgmeiRgYOKD/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1tcaPceCD3gMgM89YUhsbHph0ZCMrQCZv/view?usp=sharing"
                   rel="noreferrer"
                   target="_blank"
                 >

@@ -269,7 +269,7 @@ const AboutPage = () => {
                 <TimelineItem>
                   <TimelineOppositeContent>
                     <p className="tw-rounded-lg tw-bg-gray-500 tw-py-2 tw-text-center tw-text-base tw-uppercase tw-text-white">
-                      Nov 2023 - Present
+                      Oct 2022 - Present <br /> ( Full Time )
                     </p>
                   </TimelineOppositeContent>
                   <TimelineSeparator>
@@ -278,21 +278,39 @@ const AboutPage = () => {
                   </TimelineSeparator>
                   <TimelineContent>
                     <h6 className="tw-text-lg tw-font-bold tw-uppercase">
-                      Freelance Full-stack Developer
+                      Front-end Developer ( Currently Full-stack )
                     </h6>
                     <p className="tw-text-base tw-uppercase">
-                      Self-Employed | Various Clients
+                      Cloudswyft Global Systems, Inc.
                     </p>
                     <ul className="tw-mt-3 tw-list-disc tw-space-y-2 tw-px-4 tw-text-base">
                       <li>
-                        Collaborated with multiple employers to identify and fix
-                        software bugs, enhancing system functionality and
-                        performance.
+                        Began by creating the front-end of ICEI (Indonesia Cyber
+                        Education Institute) from scratch, designing an
+                        intuitive and responsive user interface for the Learning
+                        Management System (LMS) built on the edX platform. As
+                        the project evolved, so did my role, transitioning into
+                        a full-stack position. I now work with a tech stack that
+                        includes Python, Django, and jQuery, contributing to
+                        both the front-end and back-end development.
                       </li>
+
                       <li>
-                        Focused on identifying and fixing bugs in LMS ( Learning
-                        Management Systems ), improving functionality and user
-                        experience for multiple projects.
+                        My focus is on identifying and fixing bugs, optimizing
+                        performance, and improving the overall user experience
+                        across the platform. We work collaboratively to address
+                        issues, ensuring the system functions smoothly and
+                        efficiently for users, while continuously refining its
+                        functionality and usability.
+                      </li>
+
+                      <li>
+                        In addition, I also support Cloudswyft, helping to
+                        identify and resolve software bugs and enhance system
+                        performance. Through these experiences, we’ve developed
+                        a strong, collaborative approach to development,
+                        ensuring high-quality, reliable experiences for all
+                        users.
                       </li>
                     </ul>
                   </TimelineContent>
@@ -300,7 +318,7 @@ const AboutPage = () => {
                 <TimelineItem>
                   <TimelineOppositeContent>
                     <p className="tw-rounded-lg tw-bg-gray-500 tw-py-2 tw-text-center tw-text-base tw-uppercase tw-text-white">
-                      Oct 2022 - Oct 2023
+                      Oct 2022 - Oct 2023 <br /> ( Contract )
                     </p>
                   </TimelineOppositeContent>
                   <TimelineSeparator>
@@ -312,7 +330,7 @@ const AboutPage = () => {
                       Front-end Developer
                     </h6>
                     <p className="tw-text-base tw-uppercase">
-                      Cenote Solutions (One Year Contract)
+                      Cenote Solutions
                     </p>
                     <p className="tw-mt-3 tw-text-base">
                       In my role as a front-end developer, I had several key
