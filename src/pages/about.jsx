@@ -318,37 +318,6 @@ const AboutPage = () => {
                 <TimelineItem>
                   <TimelineOppositeContent>
                     <p className="tw-rounded-lg tw-bg-gray-500 tw-py-2 tw-text-center tw-text-base tw-uppercase tw-text-white">
-                      Oct 2022 - Oct 2023 <br /> ( Contract )
-                    </p>
-                  </TimelineOppositeContent>
-                  <TimelineSeparator>
-                    <TimelineDot />
-                    <TimelineConnector />
-                  </TimelineSeparator>
-                  <TimelineContent>
-                    <h6 className="tw-text-lg tw-font-bold tw-uppercase">
-                      Front-end Developer
-                    </h6>
-                    <p className="tw-text-base tw-uppercase">
-                      Cenote Solutions
-                    </p>
-                    <p className="tw-mt-3 tw-text-base">
-                      In my role as a front-end developer, I had several key
-                      responsibilities which primarily focused on enhancing and
-                      maintaining their product, Pulse. Additionally, I was
-                      tasked with the development of new modules using React and
-                      Typescript. I was responsible for building their IAM
-                      module, designed to config and analyze survey data
-                      collected from Qualtrics, where students provided their
-                      responses. Furthermore, I worked on overhauling various
-                      existing modules, notable the users and roles management,
-                      to improve their functionality and user experience.
-                    </p>
-                  </TimelineContent>
-                </TimelineItem>
-                <TimelineItem>
-                  <TimelineOppositeContent>
-                    <p className="tw-rounded-lg tw-bg-gray-500 tw-py-2 tw-text-center tw-text-base tw-uppercase tw-text-white">
                       Feb 2022 - Oct 2022
                     </p>
                   </TimelineOppositeContent>
