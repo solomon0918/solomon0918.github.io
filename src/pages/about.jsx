@@ -152,27 +152,6 @@ const AboutPage = () => {
                   </TimelineSeparator>
                   <TimelineContent>
                     <h6 className="tw-text-base tw-font-bold tw-uppercase">
-                      Front-end Web Developer | Aug 2020 - Jun 2021
-                    </h6>
-                    <h6 className="tw-text-base tw-uppercase">
-                      VirtualStaff PH
-                    </h6>
-                    <p className="tw-mt-3 tw-text-base">
-                      Worked on a new application for finding virtual assistants
-                      from scratch using ReactJS. The application includes
-                      dashboards for employers and job seekers with multiple
-                      features like chat and time tracking. The goal was to
-                      revamp their site.
-                    </p>
-                  </TimelineContent>
-                </TimelineItem>
-                <TimelineItem>
-                  <TimelineSeparator>
-                    <TimelineDot />
-                    <TimelineConnector />
-                  </TimelineSeparator>
-                  <TimelineContent>
-                    <h6 className="tw-text-base tw-font-bold tw-uppercase">
                       Freelance Full-stack Developer | May 2018 - Jun 2022
                     </h6>
                     <h6 className="tw-text-base tw-uppercase">
@@ -343,30 +322,6 @@ const AboutPage = () => {
                 <TimelineItem>
                   <TimelineOppositeContent>
                     <p className="tw-rounded-lg tw-bg-gray-500 tw-py-2 tw-text-center tw-text-base tw-uppercase tw-text-white">
-                      Aug 2020 - Jun 2021
-                    </p>
-                  </TimelineOppositeContent>
-                  <TimelineSeparator>
-                    <TimelineDot />
-                    <TimelineConnector />
-                  </TimelineSeparator>
-                  <TimelineContent>
-                    <h6 className="tw-text-lg tw-font-bold tw-uppercase">
-                      Front-end Web Developer
-                    </h6>
-                    <p className="tw-text-base tw-uppercase">VirtualStaff PH</p>
-                    <p className="tw-mt-3 tw-text-base">
-                      Worked on a new application for finding virtual assistants
-                      from scratch using ReactJS. The application includes
-                      dashboards for employers and job seekers with multiple
-                      features like chat and time tracking. The goal was to
-                      revamp their site.
-                    </p>
-                  </TimelineContent>
-                </TimelineItem>
-                <TimelineItem>
-                  <TimelineOppositeContent>
-                    <p className="tw-rounded-lg tw-bg-gray-500 tw-py-2 tw-text-center tw-text-base tw-uppercase tw-text-white">
                       May 2018 - Jun 2022
                     </p>
                   </TimelineOppositeContent>
@@ -465,6 +420,17 @@ const AboutPage = () => {
               </Timeline>
             )}
           </ThemeProvider>
+
+          <div className="tw-mt-10 tw-flex tw-justify-center">
+            <a
+              href="https://drive.google.com/file/d/1_zPD4x9E6y9VTcE2GIGpX-1_1Lly9WGn/view?usp=sharing"
+              rel="noreferrer"
+              target="_blank"
+              className={`tw-rounded-md tw-border-2 tw-border-accent tw-bg-accent tw-px-3 tw-py-2 tw-text-white tw-transition tw-duration-300 tw-ease-in-out hover:tw--translate-y-1`}
+            >
+              View Full Resume
+            </a>
+          </div>
         </div>
       </section>
     </Layout>
