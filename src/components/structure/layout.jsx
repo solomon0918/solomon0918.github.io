@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import { Container } from "@mui/material"
 import Footer from "./footer"
+import AnnouncementBanner from "../AnnouncementBanner"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -25,6 +26,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <AnnouncementBanner />
       <Container maxWidth="xl">
         <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
         <main>{children}</main>
